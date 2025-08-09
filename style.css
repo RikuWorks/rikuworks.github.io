@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 480px;
+  margin: auto;
+  background-color: #f9f9f9;
+}
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+p {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+#question {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px 0 20px;
+  color: #222;
+}
+#signal {
+  font-family: monospace;
+  font-size: 28px;
+  height: 60px;
+  text-align: center;
+  color: #007ACC;
+  background: #e8f0fe;
+  border-radius: 8px;
+  line-height: 60px;
+  user-select: none;
+  margin-bottom: 15px;
+}
+#feedback {
+  font-size: 18px;
+  min-height: 110px;
+  white-space: pre-line;
+  color: #444;
+  padding: 15px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  /* 追加 */
+  display: flex;
+  justify-content: center; /* 横方向中央揃え */
+  align-items: center;     /* 縦方向中央揃え */
+  text-align: center;      /* テキストも中央寄せ */
+}
+#score {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 25px;
+}
+#inputButtons {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#inputButtons button {
+  font-size: 32px;
+  padding: 14px 30px;
+  margin: 0 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #007ACC;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transition: background-color 0.3s ease;
+}
+#inputButtons button:hover {
+  background-color: #005f9e;
+}
+#inputButtons button:active {
+  background-color: #004a7a;
+}
+#startBtn {
+  display: block;
+  margin: 0 auto 40px;
+  font-size: 28px;
+  padding: 14px 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  background-color: #28a745;
+  color: white;
+  box-shadow: 0 5px 8px rgba(40,167,69,0.6);
+  transition: background-color 0.3s ease;
+}
+#startBtn:hover:not(:disabled) {
+  background-color: #218838;
+}
+#startBtn:disabled {
+  background-color: #94d3a2;
+  cursor: not-allowed;
+  box-shadow: none;
+}
