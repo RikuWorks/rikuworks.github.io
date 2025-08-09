@@ -203,6 +203,9 @@ function startGame() {
   nextQuestion();
   feedbackElem.textContent = "";
   startBtn.disabled = true;
+    if (infoBox) {
+    infoBox.style.display = 'none';
+  }
 }
 
 function endGame() {
@@ -211,6 +214,10 @@ function endGame() {
   signalElem.textContent = "";
   feedbackElem.textContent = `正解数: ${correctCount}\nミス数: ${missCount}`;
   startBtn.disabled = false;
+
+  if (infoBox) {
+    infoBox.style.display = 'block';  // 再表示
+  }
 }
 
 function nextQuestion() {
