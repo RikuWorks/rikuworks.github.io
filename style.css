@@ -229,3 +229,30 @@ footer a:focus {
     margin-bottom: 30px;
   }
 }
+
+#tweetBtn {
+  display: none;
+  font-family: monospace;
+  font-size: 24px;
+  border: 2px solid #1DA1F2;
+  height: 60px;
+  text-align: center;
+  color: #fff;
+  background: #1DA1F2;
+  border-radius: 6px;
+  line-height: 56px;
+  user-select: none;
+  margin: 0 auto 15px; /* ← これだけで中央寄せ */
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+#tweetBtn:hover {
+  background: #1A8CD8;
+  border-color: #1A8CD8;
+}
+
+#tweetBtn:active {
+  background: #166CAA;
+  border-color: #166CAA;
+}
