@@ -58,9 +58,9 @@ p {
 #feedback {
   font-size: 18px;
   min-height: 110px;
-  max-height: 420px;        /* ← 高さ制限（ここは好みで調整） */
-  overflow-y: auto;         /* ← はみ出したらスクロール */
-  white-space: normal;
+  max-height: 420px;
+  overflow-y: auto;
+
   color: #000;
   padding: 15px;
   background: #FFFFCC;
@@ -68,21 +68,21 @@ p {
   border-radius: 1px;
   margin-bottom: 20px;
 
-  display: flex;
-  flex-direction: column;  /* ← 縦並び */
-  align-items: center;     /* ← 横中央揃え */
+  /* ← flex を完全にやめる */
+  display: block;
   text-align: center;
 }
 
-/* feedback 内の画像専用 */
+/* 画像は block 要素として縦に並べる */
 #feedback img {
+  display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
-  margin-bottom: 12px;
-  border: 1px solid #999;
-  box-sizing: border-box;  /* ← はみ出し防止の要 */
+  margin: 0 auto 12px auto;
+  box-sizing: border-box;
 }
+
 #score {
   font-size: 16px;
   color: #666;
