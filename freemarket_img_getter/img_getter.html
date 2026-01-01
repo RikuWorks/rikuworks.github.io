@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>赤いフリマから画像を持ってくる</title>
+
+  <meta name="description" content="某赤いフリマサービスの商品ページから画像を一覧で確認できるツール">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <h1 class="highlight-box">赤いフリマから画像を持ってくる</h1>
+
+  <p id="infoBox" class="highlight-box-b">
+    下のボックスに「例の赤いフリマサイト」の<br>
+    商品ページURLを貼り付けると<br>
+    公開されている商品画像を一覧で表示します．<br>
+    本ツールは学習・確認用途を想定しています．<br>
+    ご質問やバグ報告はTwitterまで
+  </p>
+
+  <!-- 入力エリア -->
+  <div>
+    <h2>ここに商品ページURLをコピペしてください</h2>
+    <div
+      id="signal"
+      contenteditable="true"
+      class="highlight-box"
+      style="min-height:120px;">
+    </div>
+  </div>
+
+  <!-- 実行ボタン -->
+  <div style="text-align:center; margin-bottom:20px;">
+    <button id="startBtn">画像を表示</button>
+  </div>
+
+  <!-- 出力エリア -->
+  <div>
+    <h2>商品画像</h2>
+    <div id="feedback" class="highlight-box-b"></div>
+  </div>
+  
+    <div style="text-align:center; margin-bottom:30px;">
+    <a href="../index.html" class="back-btn">← 戻る</a>
+    </div>
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+
+<footer style="text-align:center; margin-top:10px; font-size:14px; color:#555;">
+  <p>
+    &copy; 2025 rikuworks&nbsp;|&nbsp;
+    <a href="https://twitter.com/motomochi_robo"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:#1DA1F2; text-decoration:none;">
+      Twitter @motomochi_robo
+    </a>
+  </p>
+</footer>
+
+</html>
