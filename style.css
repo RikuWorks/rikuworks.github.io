@@ -267,3 +267,47 @@ footer a:focus {
   background: #166CAA;
   border-color: #166CAA;
 }
+/* 条件設定エリア（signal風） */
+.condition-box {
+  font-family: monospace;
+  font-size: 16px;
+  color: #000;
+
+  background: #66FFFF;      /* signalと同じ色 */
+  border: 2px solid black;
+  border-radius: 1px;
+
+  padding: 15px 20px;
+  max-width: 480px;
+  margin: 0 auto 20px auto;
+
+  text-align: center;
+}
+
+/* にぎやかスタートボタン */
+#startBtn {
+  animation: pulse 1.5s infinite;
+}
+
+/* ホバーで回転＆拡大 */
+#startBtn:hover:not(:disabled) {
+  transform: scale(1.05) rotate(-1deg);
+}
+
+/* 押した瞬間 */
+#startBtn:active {
+  transform: scale(0.95);
+}
+
+/* アニメーション */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40,167,69,0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(40,167,69,0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40,167,69,0);
+  }
+}
