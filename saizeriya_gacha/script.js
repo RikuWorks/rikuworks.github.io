@@ -1281,10 +1281,12 @@ function runSetGacha(index) {
    ツイート
 ===================== */
 function showTweetSingle(item) {
+  const pageUrl = "https://rikuworks.github.io/saizeriya_gacha/saizeriya_gacha.html";
   const text =
     `サイゼリヤ単品ガチャ🍝\n` +
     `【${item.id}】${item.name}\n` +
     `💴 ${item.price}円 / 🔥 ${item.calorie}kcal\n` +
+    `\n\n🔗 ${pageUrl}\n` +
     `#サイゼリヤ #単品ガチャ`;
 
   setupTweet(text);
@@ -1297,7 +1299,7 @@ function showTweetSet(setName, result) {
     `🔥 ${setName}に挑戦！\n` +
     `💴 ${result.totalPrice}円 / 🔥 ${result.totalCal}kcal\n` +
     result.selected.map(i => `・${i.name}`).join("\n") +
-    `\n\n🔗 ${pageUrl}\n` +
+    `🔗${pageUrl}\n` +
     `#サイゼリヤ #ドカ食い`;
 
   setupTweet(text);
