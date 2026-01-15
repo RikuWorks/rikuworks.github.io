@@ -1215,7 +1215,7 @@ function generateCalorieSet(minCal, maxCal, minPrice, maxPrice) {
   const pool = MENUS.filter(m => !m.is_alcohol);
 
   let safety = 0;
-  while (totalCal < minCal && safety < 1000) {
+  while (totalCal < minCal && safety < 1000000) {
     const item = pool[Math.floor(Math.random() * pool.length)];
     selected.push(item);
     totalCal += item.calorie;
@@ -1243,7 +1243,7 @@ function runSetGacha(index) {
 
   let result = null;
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 1000000; i++) {
     result = generateCalorieSet(
       set.min,
       set.max,
