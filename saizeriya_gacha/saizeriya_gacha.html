@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>サイゼリヤ単品ガチャ</title>
+
+  <meta name="description" content="サイゼリヤのメニューから単品・ドカ食いセットをランダムで選ぶツール">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <!-- タイトル -->
+  <h1 class="highlight-box">🍝 サイゼリヤ単品ガチャ</h1>
+
+  <!-- 説明 -->
+  <p id="infoBox" class="highlight-box-b">
+    下のボタンを押すと<br>
+    サイゼリヤのメニューから<br>
+    ランダムで1品、または<br>
+    ドカ食いセットを表示します🎰<br>
+    本ツールは娯楽・検討用途を想定しています．
+  </p>
+
+  <!-- フィルタ -->
+  <section>
+    <h2>🔍 フィルタ条件（単品）</h2>
+    <div class="condition-box">
+
+      <p>💴 価格範囲</p>
+      <input type="number" id="minPrice" placeholder="最低価格">
+      〜
+      <input type="number" id="maxPrice" placeholder="最高価格">
+
+      <br><br>
+
+      <label>
+        <input type="checkbox" id="allowAlcohol">
+        🍺 アルコールを含める
+      </label>
+
+    </div>
+  </section>
+
+  <!-- 単品ガチャ -->
+  <div style="text-align:center; margin:25px 0;">
+    <button id="startBtn">🎰 単品ガチャを回す 🍝</button>
+  </div>
+
+  <!-- ドカ食いセット -->
+  <section>
+    <h2>🔥 ドカ食いセット</h2>
+
+    <div class="condition-box">
+      <p>💸 セット金額制限</p>
+      <input type="number" id="minSetPrice" placeholder="最低金額">
+      〜
+      <input type="number" id="maxSetPrice" placeholder="最高金額">
+    </div>
+
+    <div style="text-align:center; margin:20px 0;">
+      <button onclick="runSetGacha(0)">🍎 スペシャル</button>
+      <button onclick="runSetGacha(1)">🍈 アドバンス</button>
+      <button onclick="runSetGacha(2)">🔔 チャレンジ</button>
+      <button onclick="runSetGacha(3)">🔑 パーフェクト</button>
+    </div>
+  </section>
+
+  <!-- 結果 -->
+  <section>
+    <h2>📋 結果</h2>
+    <div id="feedback" class="highlight-box-b">
+      ここに結果が表示されます
+    </div>
+
+    <!-- ツイート -->
+    <div id="tweetBtn" style="display:none;">
+      🐦 結果をツイート
+    </div>
+  </section>
+
+  <!-- 戻る -->
+  <div style="text-align:center; margin:30px 0;">
+    <a href="../index.html" class="back-btn">← 戻る</a>
+  </div>
+
+  <!-- フッター -->
+  <footer style="text-align:center; margin-top:20px; font-size:14px; color:#555;">
+    <p>
+      &copy; 2025 rikuworks&nbsp;|&nbsp;
+      <a href="https://twitter.com/motomochi_robo"
+         target="_blank"
+         rel="noopener noreferrer"
+         style="color:#1DA1F2; text-decoration:none;">
+        Twitter @motomochi_robo
+      </a>
+    </p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
