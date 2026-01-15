@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>コンビニゲーム：サイコロ商品ガチャ</title>
+
+  <meta name="description" content="6つの商品を入力してサイコロでランダムに選ぶツール">
+
+  <!-- CSS（既存のを流用） -->
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+
+  <h1 class="highlight-box">🎲 コンビニゲーム：サイコロ商品ガチャ</h1>
+
+  <p class="highlight-box-b">
+    6つの商品名を入力して、サイコロを振ると<br>
+    出た目（1〜6）に対応する商品が選ばれます。
+  </p>
+
+  <section>
+    <h2>🧾 商品入力（6個）</h2>
+    <div class="condition-box">
+
+      <p style="margin-top:0;">商品名（空欄OK：空欄に当たると「ハズレ」扱いにもできる）</p>
+
+      <div style="display:grid; gap:10px;">
+        <input type="text" id="item1" placeholder="1：例）おにぎり">
+        <input type="text" id="item2" placeholder="2：例）からあげ棒">
+        <input type="text" id="item3" placeholder="3：例）カップ麺">
+        <input type="text" id="item4" placeholder="4：例）チョコ">
+        <input type="text" id="item5" placeholder="5：例）アイス">
+        <input type="text" id="item6" placeholder="6：例）エナドリ">
+      </div>
+
+      <br>
+
+      <label>
+        <input type="checkbox" id="treatEmptyAsLose" checked>
+        空欄に当たったら「ハズレ」にする
+      </label>
+
+    </div>
+  </section>
+
+  <!-- 実行ボタン（startBtn） -->
+  <div style="text-align:center; margin:25px 0;">
+    <button id="startBtn">🎲 サイコロを振る</button>
+  </div>
+
+  <!-- 結果 -->
+  <section>
+    <h2>📋 結果</h2>
+
+    <div id="feedback" class="highlight-box-b">
+      ここに結果が表示されます
+    </div>
+
+    <!-- ツイート（結果が出たら表示） -->
+    <div style="text-align:center; margin-top:15px;">
+      <button id="tweetBtn" style="display:none;">
+        🐦 結果をツイート
+      </button>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin:30px 0;">
+    <a href="../index.html" class="back-btn">← 戻る</a>
+  </div>
+
+  <!-- フッター -->
+  <footer style="text-align:center; margin-top:20px; font-size:14px; color:#555;">
+    <p>
+      &copy; 2025 rikuworks&nbsp;|&nbsp;
+      <a href="https://twitter.com/motomochi_robo"
+         target="_blank"
+         rel="noopener noreferrer"
+         style="color:#1DA1F2; text-decoration:none;">
+        Twitter @motomochi_robo
+      </a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
